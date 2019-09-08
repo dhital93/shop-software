@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="updates.css">
+	<meta charset="UTF-8">
+	<title>updates</title>
+</head>
+
+<body onload="displayallitems()">
+	<div id="container">
+		<textarea type="text" name="textview" id="textview" disabled></textarea>
+		<textarea type="text" name="textviewone" id="textviewone" disabled></textarea>
+		<input type="text" name="total" id="total">
+		<p class="total">TOTAL:</p>
+		<button type="button" class="delet" onclick="delet(), bc()">Clear</button>
+	</div>
+	<button id="fruits" onclick="list(0)">fruits</button>
+	<button id="food" onclick="list(1)">food</button>
+	<button id="vegetable" onclick="list(2)">vegetable</button>
+	<button id="drinks" onclick="list(3)">drinks</button>
+	<button id="edit" onclick="editoption()">edit</button>
+	<div id="pathforedit">
+		<button onclick="poopofselection(1)">x</button>
+		<select id="pathlist">
+			<option>Fruits</option>
+			<option>Food</option>
+			<option>Vegetable</option>
+			<option>Drinks</option>
+		</select><br>
+		<input type="number" name="" id="pathnumber"><br>
+		<button onclick="poopofeditform()">ok</button>
+	</div>
+	<div id="fruitslist">
+		<table>
+			<tr>
+				<td><button onclick="fruitButton(1)">
+						<h4 id="frNameOne"></h4>
+						<h4 id="frPriceOne"></h4>
+					</button></td>
+				<td><button onclick="fruitButton(2)">
+						<h4 id="frNameTwo"></h4>
+						<h4 id="frPriceTwo"></h4>
+					</button></td>
+				<td><button onclick="fruitButton(3)">
+						<h4 id="frNameThree"></h4>
+						<h4 id="frPriceThree"></h4>
+					</button></td>
+				<td><button onclick="fruitButton(4)">
+						<h4 id="frNameFour"></h4>
+						<h4 id="frPriceFour"></h4>
+					</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="fruitButton(5)">
+						<h4 id="frNameFive"></h4>
+						<h4 id="frPriceFive"></h4>
+					</button></td>
+				<td><button onclick="fruitButton(6)">
+						<h4 id="frNameSix"></h4>
+						<h4 id="frPriceSix"></h4>
+					</button></td>
+				<td><button onclick="fruitButton(7)">
+						<h4 id="frNameSeven"></h4>
+						<h4 id="frPriceSeven"></h4>
+					</button></td>
+				<td><button onclick="fruitButton(8)">
+						<h4 id="frNameEight"></h4>
+						<h4 id="frPriceEight"></h4>
+					</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="fruitButton(9)">
+						<h4 id="frNameNine"></h4>
+						<h4 id="frPriceNine"></h4>
+					</button></td>
+				<td><button onclick="fruitButton(10)">
+						<h4 id="frNameTen"></h4>
+						<h4 id="frPriceTen"></h4>
+					</button></td>
+				<td><button onclick="fruitButton(11)">
+						<h4 id="frNameEleven"></h4>
+						<h4 id="frPriceEleven"></h4>
+					</button></td>
+				<td><button onclick="fruitButton(12)">
+						<h4 id="frNameTwelve"></h4>
+						<h4 id="frPriceTwelve"></h4>
+					</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="fruitButton(13)">
+						<h4 id="frNameThirteen"></h4>
+						<h4 id="frPriceThirteen"></h4>
+					</button></td>
+				<td><button onclick="fruitButton(14)">
+						<h4 id="frNameForteen"></h4>
+						<h4 id="frPriceForteen"></h4>
+					</button></td>
+				<td><button onclick="fruitButton(15)">
+						<h4 id="frNameFifteen"></h4>
+						<h4 id="frPriceFifteen"></h4>
+					</button></td>
+				<td><button onclick="fruitButton(16)">
+						<h4 id="frNameSixteen"></h4>
+						<h4 id="frPriceSixteen"></h4>
+					</button></td>
+			</tr>
+		</table>
+
+	</div>
+	<div id="foodlist">
+		<table>
+			<tr>
+				<td><button onclick="foodButton(1)">
+						<h4 id="foNameOne"></h4>
+						<h4 id="foPriceOne"></h4>
+					</button></td>
+				<td><button onclick="foodButton(2)">
+						<h4 id="foNameTwo"></h4>
+						<h4 id="foPriceTwo"></h4>
+					</button></td>
+				<td><button onclick="foodButton(3)">
+						<h4 id="foNameThree"></h4>
+						<h4 id="foPriceThree"></h4>
+					</button></td>
+				<td><button onclick="foodButton(4)">
+						<h4 id="foNameFour"></h4>
+						<h4 id="foPriceFour"></h4>
+					</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="foodButton(5)">
+						<h4 id="foNameFive"></h4>
+						<h4 id="foPriceFive"></h4>
+					</button></td>
+				<td><button onclick="foodButton(6)">
+						<h4 id="foNameSix"></h4>
+						<h4 id="foPriceSix"></h4>
+					</button></td>
+				<td><button onclick="foodButton(7)">
+						<h4 id="foNameSeven"></h4>
+						<h4 id="foPriceSeven"></h4>
+					</button></td>
+				<td><button onclick="foodButton(8)">
+						<h4 id="foNameEight"></h4>
+						<h4 id="foPriceEight"></h4>
+					</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="foodButton(9)">
+						<h4 id="foNameNine"></h4>
+						<h4 id="foPriceNine"></h4>
+					</button></td>
+				<td><button onclick="foodButton(10)">
+						<h4 id="foNameTen"></h4>
+						<h4 id="foPriceTen"></h4>
+					</button></td>
+				<td><button onclick="foodButton(11)">
+						<h4 id="foNameEleven"></h4>
+						<h4 id="foPriceEleven"></h4>
+					</button></td>
+				<td><button onclick="foodButton(12)">
+						<h4 id="foNameTwelve"></h4>
+						<h4 id="foPriceTwelve"></h4>
+					</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="foodButton(13)">
+						<h4 id="foNameThirteen"></h4>
+						<h4 id="foPriceThirteen"></h4>
+					</button></td>
+				<td><button onclick="foodButton(14)">
+						<h4 id="foNameForteen"></h4>
+						<h4 id="foPriceForteen"></h4>
+					</button></td>
+				<td><button onclick="foodButton(15)">
+						<h4 id="foNameFifteen"></h4>
+						<h4 id="foPriceFifteen"></h4>
+					</button></td>
+				<td><button onclick="foodButton(16)">
+						<h4 id="foNameSixteen"></h4>
+						<h4 id="foPriceSixteen"></h4>
+					</button></td>
+			</tr>
+		</table>
+
+	</div>
+	<div id="vegetablelist">
+		<table>
+			<tr>
+				<td><button onclick="vegetableButton(1)">
+						<h4 id="vNameOne"></h4>
+						<h4 id="vPriceOne"></h4>
+					</button></td>
+				<td><button onclick="vegetableButton(2)">
+						<h4 id="vNameTwo"></h4>
+						<h4 id="vPriceTwo"></h4>
+					</button></td>
+				<td><button onclick="vegetableButton(3)">
+						<h4 id="vNameThree"></h4>
+						<h4 id="vPriceThree"></h4>
+					</button></td>
+				<td><button onclick="vegetableButton(4)">
+						<h4 id="vNameFour"></h4>
+						<h4 id="vPriceFour"></h4>
+					</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="vegetableButton(5)">
+						<h4 id="vNameFive"></h4>
+						<h4 id="vPriceFive"></h4>
+					</button></td>
+				<td><button onclick="vegetableButton(6)">
+						<h4 id="vNameSix"></h4>
+						<h4 id="vPriceSix"></h4>
+					</button></td>
+				<td><button onclick="vegetableButton(7)">
+						<h4 id="vNameSeven"></h4>
+						<h4 id="vPriceSeven"></h4>
+					</button></td>
+				<td><button onclick="vegetableButton(8)">
+						<h4 id="vNameEight"></h4>
+						<h4 id="vPriceEight"></h4>
+					</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="vegetableButton(9)">
+						<h4 id="vNameNine"></h4>
+						<h4 id="vPriceNine"></h4>
+					</button></td>
+				<td><button onclick="vegetableButton(10)">
+						<h4 id="vNameTen"></h4>
+						<h4 id="vPriceTen"></h4>
+					</button></td>
+				<td><button onclick="vegetableButton(11)">
+						<h4 id="vNameEleven"></h4>
+						<h4 id="vPriceEleven"></h4>
+					</button></td>
+				<td><button onclick="vegetableButton(12)">
+						<h4 id="vNameTwelve"></h4>
+						<h4 id="vPriceTwelve"></h4>
+					</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="vegetableButton(13)">
+						<h4 id="vNameThirteen"></h4>
+						<h4 id="vPriceThirteen"></h4>
+					</button></td>
+				<td><button onclick="vegetableButton(14)">
+						<h4 id="vNameForteen"></h4>
+						<h4 id="vPriceForteen"></h4>
+					</button></td>
+				<td><button onclick="vegetableButton(15)">
+						<h4 id="vNameFifteen"></h4>
+						<h4 id="vPriceFifteen"></h4>
+					</button></td>
+				<td><button onclick="vegetableButton(16)">
+						<h4 id="vNameSixteen"></h4>
+						<h4 id="vPriceSixteen"></h4>
+					</button></td>
+			</tr>
+		</table>
+
+
+	</div>
+	<div id="drinkslist">
+		<table>
+			<tr>
+				<td><button onclick="drinkButton(1)">
+						<h4 id="drNameOne"></h4>
+						<h4 id="drPriceOne"></h4>
+					</button></td>
+				<td><button onclick="drinkButton(2)">
+						<h4 id="drNameTwo"></h4>
+						<h4 id="drPriceTwo"></h4>
+					</button></td>
+				<td><button onclick="drinkButton(3)">
+						<h4 id="drNameThree"></h4>
+						<h4 id="drPriceThree"></h4>
+					</button></td>
+				<td><button onclick="drinkButton(4)">
+						<h4 id="drNameFour"></h4>
+						<h4 id="drPriceFour"></h4>
+					</button></td>
+			</tr>
+			<tr>
+				<td><button onauxclick="drinkButton(5)">
+						<h4 id="drNameFive"></h4>
+						<h4 id="drPriceFive"></h4>
+					</button></td>
+				<td><button onclick="drinkButton(6)">
+						<h4 id="drNameSix"></h4>
+						<h4 id="drPriceSix"></h4>
+					</button></td>
+				<td><button onclick="drinkButton(7)">
+						<h4 id="drNameSeven"></h4>
+						<h4 id="drPriceSeven"></h4>
+					</button></td>
+				<td><button onclick="drinkButton(8)">
+						<h4 id="drNameEight"></h4>
+						<h4 id="drPriceEight"></h4>
+					</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="drinkButton(9)">
+						<h4 id="drNameNine"></h4>
+						<h4 id="drPriceNine"></h4>
+					</button></td>
+				<td><button onclick="drinkButton(10)">
+						<h4 id="drNameTen"></h4>
+						<h4 id="drPriceTen"></h4>
+					</button></td>
+				<td><button onclick="drinkButton(11)">
+						<h4 id="drNameEleven"></h4>
+						<h4 id="drPriceEleven"></h4>
+					</button></td>
+				<td><button onclick="drinkButton(12)">
+						<h4 id="drNameTwelve"></h4>
+						<h4 id="drPriceTwelve"></h4>
+					</button></td>
+			</tr>
+			<tr>
+				<td><button onclick="drinkButton(13)">
+						<h4 id="drNameThirteen"></h4>
+						<h4 id="drPriceThirteen"></h4>
+					</button></td>
+				<td><button onclick="drinkButton(14)">
+						<h4 id="drNameForteen"></h4>
+						<h4 id="drPriceForteen"></h4>
+					</button></td>
+				<td><button onclick="drinkButton(15)">
+						<h4 id="drNameFifteen"></h4>
+						<h4 id="drPriceFifteen"></h4>
+					</button></td>
+				<td><button onclick="drinkButton(16)">
+						<h4 id="drNameSixteen"></h4>
+						<h4 id="drPriceSixteen"></h4>
+					</button></td>
+			</tr>
+		</table>
+
+	</div>
+	<div class="calculator">
+		<input type="text" id="moneyvalue"><br>
+		<table>
+			<tr>
+				<td><button type="button" id="c" value="C" onclick="bc()">C</button></td>
+				<td><button type="button" id="plus" value="+/-" onclick="back()">⌦</button></td>
+				<td><button type="button" id="percent" value="%" onclick="bpercent()">D</button></td>
+			</tr>
+			<tr>
+				<td><button type="button" value="7" onclick="bseven()">7</button></td>
+				<td><button type="button" value="8" onclick="beight()">8</button></td>
+				<td><button type="button" value="9" onclick="bnine()">9</button></td>
+
+			</tr>
+			<tr>
+				<td><button type="button" value="4" onclick="bfour()">4</button></td>
+				<td><button type="button" value="5" onclick="bfive()">5</button></td>
+				<td><button type="button" value="6" onclick="bsix()">6</button></td>
+
+			</tr>
+			<tr>
+				<td><button type="button" value="1" onclick="bone()">1</button></td>
+				<td><button type="button" value="2" onclick="btwo()">2</button></td>
+				<td><button type="button" value="3" onclick="bthree()">3</button></td>
+
+			</tr>
+			<tr>
+				<td><button type="button" value="0" onclick="bzero()">0</button></td>
+				<td><button type="button" value="." onclick="bpoint()">.</button></td>
+				<td><button type="button" value="00" onclick="bdzero()">00</button></td>
+				<td><button type="button" value="=" id="equal" onclick="moneyback(),moneyless()">⏎</button></td>
+			</tr>
+		</table>
+	</div>
+	<div id="poopup">
+		<h2 id="negative"></h2>
+		<h2 id="moneyback"></h2>
+		<button onclick="ok(),reload()">ok</button>
+	</div>
+
+
+	<script type="text/javascript">
+		function list(a) {
+			if (a == 0) {
+				document.getElementById('fruitslist').style.display = "block";
+				document.getElementById('foodlist').style.display = "none";
+				document.getElementById('vegetablelist').style.display = "none";
+				document.getElementById('drinkslist').style.display = "none";
+			}
+			else if (a == 1) {
+				document.getElementById('fruitslist').style.display = "none";
+				document.getElementById('foodlist').style.display = "block";
+				document.getElementById('vegetablelist').style.display = "none";
+				document.getElementById('drinkslist').style.display = "none";
+			}
+			else if (a == 2) {
+				document.getElementById('fruitslist').style.display = "none";
+				document.getElementById('foodlist').style.display = "none";
+				document.getElementById('vegetablelist').style.display = "block";
+				document.getElementById('drinkslist').style.display = "none";
+			}
+			else {
+				document.getElementById('fruitslist').style.display = "none";
+				document.getElementById('foodlist').style.display = "none";
+				document.getElementById('vegetablelist').style.display = "none";
+				document.getElementById('drinkslist').style.display = "block";
+			}
+		}
+		//clear button
+		function delet() {
+			document.getElementById('textview').value = "";
+			document.getElementById('textviewone').value = "";
+		}
+		// creat the variable for frits items (name )to call back;
+		var frNameOne = window.localStorage.getItem('frNameOne');
+		var frNameTwo = window.localStorage.getItem('frNameTwo');
+		var frNameThree = window.localStorage.getItem('frNameThree');
+		var frNameFour = window.localStorage.getItem('frNameFour');
+		var frNameFive = window.localStorage.getItem('frNameFive');
+		var frNameSix = window.localStorage.getItem('frNameSix');
+		var frNameSeven = window.localStorage.getItem('frNameSeven');
+		var frNameEight = window.localStorage.getItem('frNameEight');
+		var frNameNine = window.localStorage.getItem('frNameNine');
+		var frNameTen = window.localStorage.getItem('frNameTen');
+		var frNameEleven = window.localStorage.getItem('frNameEleven');
+		var frNameTwelve = window.localStorage.getItem('frNameTwelve');
+		var frNameThirteen = window.localStorage.getItem('frNameThirteen');
+		var frNameFourteen = window.localStorage.getItem('frNameFourteen');
+		var frNameFifteen = window.localStorage.getItem('frNameFifteen');
+		var frNameSixteen = window.localStorage.getItem('frNameSixteen');
+		//creat the variable for fruit items (price ) to call back later
+		var frPriceOne = window.localStorage.getItem('frPriceOne');
+		var frPriceTwo = window.localStorage.getItem('frPriceTwo');
+		var frPriceThree = window.localStorage.getItem('frPriceThree');
+		var frPriceFour = window.localStorage.getItem('frPriceFour');
+		var frPriceFive = window.localStorage.getItem('frPriceFive');
+		var frPriceSix = window.localStorage.getItem('frPriceSix');
+		var frPriceSeven = window.localStorage.getItem('frPriceSeven');
+		var frPriceEight = window.localStorage.getItem('frPriceEight');
+		var frPriceNine = window.localStorage.getItem('frPriceNine');
+		var frPriceTen = window.localStorage.getItem('frPriceTen');
+		var frPriceEleven = window.localStorage.getItem('frPriceEleven');
+		var frPriceTwelve = window.localStorage.getItem('frPriceTwelve');
+		var frPriceThirteen = window.localStorage.getItem('frPriceThirteen');
+		var frPriceFourteen = window.localStorage.getItem('frPriceFourteen');
+		var frPriceFifteen = window.localStorage.getItem('frPriceFifteen');
+		var frPriceSixteen = window.localStorage.getItem('frPriceSixteen');
+		//creating  the variable of name of food items to call later
+		var foNameOne = window.localStorage.getItem('foNameOne');
+		var foNameTwo = window.localStorage.getItem('foNameTwo');
+		var foNameThree = window.localStorage.getItem('foNameThree');
+		var foNameFour = window.localStorage.getItem('foNameFour');
+		var foNameFive = window.localStorage.getItem('foNameFive');
+		var foNameSix = window.localStorage.getItem('foNameSix');
+		var foNameSeven = window.localStorage.getItem('foNameSeven');
+		var foNameEight = window.localStorage.getItem('foNameEight');
+		var foNameNine = window.localStorage.getItem('foNameNine');
+		var foNameTen = window.localStorage.getItem('foNameTen');
+		var foNameEleven = window.localStorage.getItem('foNameEleven');
+		var foNameTwelve = window.localStorage.getItem('foNameTwelve');
+		var foNameThirteen = window.localStorage.getItem('foNameThirteen');
+		var foNameFourteen = window.localStorage.getItem('foNameFourteen');
+		var foNameFifteen = window.localStorage.getItem('foNameFifteen');
+		var foNameSixteen = window.localStorage.getItem('foNameSixteen');
+		//creating the variable of (price) of food items to call later
+		var foPriceOne = window.localStorage.getItem('foPriceOne');
+		var foPriceTwo = window.localStorage.getItem('foPriceTwo');
+		var foPriceThree = window.localStorage.getItem('foPriceThree');
+		var foPriceFour = window.localStorage.getItem('foPriceFour');
+		var foPriceFive = window.localStorage.getItem('foPriceFive');
+		var foPriceSix = window.localStorage.getItem('foPriceSix');
+		var foPriceSeven = window.localStorage.getItem('foPriceSeven');
+		var foPriceEight = window.localStorage.getItem('foPriceEight');
+		var foPriceNine = window.localStorage.getItem('foPriceNine');
+		var foPriceTen = window.localStorage.getItem('foPriceTen');
+		var foPriceEleven = window.localStorage.getItem('foPriceEleven');
+		var foPriceTwelve = window.localStorage.getItem('foPriceTwelve');
+		var foPriceThirteen = window.localStorage.getItem('foPriceThirteen');
+		var foPriceFourteen = window.localStorage.getItem('foPriceFourteen');
+		var foPriceFifteen = window.localStorage.getItem('foPriceFifteen');
+		var foPriceSixteen = window.localStorage.getItem('foPriceSixteen');
+		//creating the variable for name of vegetable items to use later
+		var vNameOne = window.localStorage.getItem('vNameOne');
+		var vNameTwo = window.localStorage.getItem('vNameTwo');
+		var vNameThree = window.localStorage.getItem('vNameThree');
+		var vNameFour = window.localStorage.getItem('vNameFour');
+		var vNameFive = window.localStorage.getItem('vNameFive');
+		var vNameSix = window.localStorage.getItem('vNameSix');
+		var vNameSeven = window.localStorage.getItem('vNameSeven');
+		var vNameEight = window.localStorage.getItem('vNameEight');
+		var vNameNine = window.localStorage.getItem('vNameNine');
+		var vNameTen = window.localStorage.getItem('vNameTen');
+		var vNameEleven = window.localStorage.getItem('vNameEleven');
+		var vNameTwelve = window.localStorage.getItem('vNameTwelve');
+		var vNameThirteen = window.localStorage.getItem('vNameThirteen');
+		var vNameFourteen = window.localStorage.getItem('vNameFourteen');
+		var vNameFifteen = window.localStorage.getItem('vNameFifteen');
+		var vNameSixteen = window.localStorage.getItem('vNameSixteen');
+		// creating the variable for price of all vegetable items to use later
+		var vPriceOne = window.localStorage.getItem('vPriceOne');
+		var vPriceTwo = window.localStorage.getItem('vPriceTwo');
+		var vPriceThree = window.localStorage.getItem('vPriceThree');
+		var vPriceFour = window.localStorage.getItem('vPriceFour');
+		var vPriceFive = window.localStorage.getItem('vPriceFive');
+		var vPriceSix = window.localStorage.getItem('vPriceSix');
+		var vPriceSeven = window.localStorage.getItem('vPriceSeven');
+		var vPriceEight = window.localStorage.getItem('vPriceEight');
+		var vPriceNine = window.localStorage.getItem('vPriceNine');
+		var vPriceTen = window.localStorage.getItem('vPriceTen');
+		var vPriceEleven = window.localStorage.getItem('vPriceEleven');
+		var vPriceTwelve = window.localStorage.getItem('vPriceTwelve');
+		var vPriceThirteen = window.localStorage.getItem('vPriceThirteen');
+		var vPriceFourteen = window.localStorage.getItem('vPriceFourteen');
+		var vPriceFifteen = window.localStorage.getItem('vPriceFifteen');
+		var vPriceSixteen = window.localStorage.getItem('vPriceSixteen');
+
+		// creat the variable for drinks items (name )to call back;
+		var drNameOne = window.localStorage.getItem('drNameOne');
+		var drNameTwo = window.localStorage.getItem('drNameTwo');
+		var drNameThree = window.localStorage.getItem('drNameThree');
+		var drNameFour = window.localStorage.getItem('drNameFour');
+		var drNameFive = window.localStorage.getItem('drNameFive');
+		var drNameSix = window.localStorage.getItem('drNameSix');
+		var drNameSeven = window.localStorage.getItem('drNameSeven');
+		var drNameEight = window.localStorage.getItem('drNameEight');
+		var drNameNine = window.localStorage.getItem('drNameNine');
+		var drNameTen = window.localStorage.getItem('drNameTen');
+		var drNameEleven = window.localStorage.getItem('drNameEleven');
+		var drNameTwelve = window.localStorage.getItem('drNameTwelve');
+		var drNameThirteen = window.localStorage.getItem('drNameThirteen');
+		var drNameFourteen = window.localStorage.getItem('drNameFourteen');
+		var drNameFifteen = window.localStorage.getItem('drNameFifteen');
+		var drNameSixteen = window.localStorage.getItem('drNameSixteen');
+
+		//creat the variable for drinks items (price ) to call back later
+		var drPriceOne = window.localStorage.getItem('drPriceOne');
+		var drPriceTwo = window.localStorage.getItem('drPriceTwo');
+		var drPriceThree = window.localStorage.getItem('drPriceThree');
+		var drPriceFour = window.localStorage.getItem('drPriceFour');
+		var drPriceFive = window.localStorage.getItem('drPriceFive');
+		var drPriceSix = window.localStorage.getItem('drPriceSix');
+		var drPriceSeven = window.localStorage.getItem('drPriceSeven');
+		var drPriceEight = window.localStorage.getItem('drPriceEight');
+		var drPriceNine = window.localStorage.getItem('drPriceNine');
+		var drPriceTen = window.localStorage.getItem('drPriceTen');
+		var drPriceEleven = window.localStorage.getItem('drPriceEleven');
+		var drPriceTwelve = window.localStorage.getItem('drPriceTwelve');
+		var drPriceThirteen = window.localStorage.getItem('drPriceThirteen');
+		var drPriceFourteen = window.localStorage.getItem('drPriceFourteen');
+		var drPriceFifteen = window.localStorage.getItem('drPriceFifteen');
+		var drPriceSixteen = window.localStorage.getItem('drPriceSixteen');
+
+
+		//function to call all save item to the button for the display
+		function displayallitems() {
+			//all the name of fruis items to display in a button
+			document.getElementById('frNameOne').innerHTML = frNameOne;
+			document.getElementById('frNameTwo').innerHTML = frNameTwo;
+			document.getElementById('frNameThree').innerHTML = frNameThree;
+			document.getElementById('frNameFour').innerHTML = frNameFour;
+			document.getElementById('frNameFive').innerHTML = frNameFive;
+			document.getElementById('frNameSix').innerHTML = frNameSix;
+			document.getElementById('frNameSeven').innerHTML = frNameSeven;
+			document.getElementById('frNameEight').innerHTML = frNameEight;
+			document.getElementById('frNameNine').innerHTML = frNameNine;
+			document.getElementById('frNameTen').innerHTML = frNameTen;
+			document.getElementById('frNameEleven').innerHTML = frNameEleven;
+			document.getElementById('frNameTwelve').innerHTML = frNameTwelve;
+			document.getElementById('frNameThirteen').innerHTML = frNameThirteen;
+			document.getElementById('frNameForteen').innerHTML = frNameFourteen;
+			document.getElementById('frNameFifteen').innerHTML = frNameFifteen;
+			document.getElementById('frNameSixteen').innerHTML = frNameSixteen;
+			//all the iteams of fruits price to display in a button
+			document.getElementById('frPriceOne').innerHTML = frPriceOne;
+			document.getElementById('frPriceTwo').innerHTML = frPriceTwo;
+			document.getElementById('frPriceThree').innerHTML = frPriceThree;
+			document.getElementById('frPriceFour').innerHTML = frPriceFour;
+			document.getElementById('frPriceFive').innerHTML = frPriceFive;
+			document.getElementById('frPriceSix').innerHTML = frPriceSix;
+			document.getElementById('frPriceSeven').innerHTML = frPriceSeven;
+			document.getElementById('frPriceEight').innerHTML = frPriceEight;
+			document.getElementById('frPriceNine').innerHTML = frPriceNine;
+			document.getElementById('frPriceTen').innerHTML = frPriceTen;
+			document.getElementById('frPriceEleven').innerHTML = frPriceEleven;
+			document.getElementById('frPriceTwelve').innerHTML = frPriceTwelve;
+			document.getElementById('frPriceThirteen').innerHTML = frPriceThirteen;
+			document.getElementById('frPriceForteen').innerHTML = frPriceFourteen;
+			document.getElementById('frPriceFifteen').innerHTML = frPriceFifteen;
+			document.getElementById('frPriceSixteen').innerHTML = frPriceSixteen;
+			//to disdplay the name of all food items in a button
+			document.getElementById('foNameOne').innerHTML = foNameOne;
+			document.getElementById('foNameTwo').innerHTML = foNameTwo;
+			document.getElementById('foNameThree').innerHTML = foNameThree;
+			document.getElementById('foNameFour').innerHTML = foNameFour;
+			document.getElementById('foNameFive').innerHTML = foNameFive;
+			document.getElementById('foNameSix').innerHTML = foNameSix;
+			document.getElementById('foNameSeven').innerHTML = foNameSeven;
+			document.getElementById('foNameEight').innerHTML = foNameEight;
+			document.getElementById('foNameNine').innerHTML = foNameNine;
+			document.getElementById('foNameTen').innerHTML = foNameTen;
+			document.getElementById('foNameEleven').innerHTML = foNameEleven;
+			document.getElementById('foNameTwelve').innerHTML = foNameTwelve;
+			document.getElementById('foNameThirteen').innerHTML = foNameThirteen;
+			document.getElementById('foNameForteen').innerHTML = foNameFourteen;
+			document.getElementById('foNameFifteen').innerHTML = foNameFifteen;
+			document.getElementById('foNameSixteen').innerHTML = foNameSixteen;
+			//to display the all price of Food items in a button
+			document.getElementById('foPriceOne').innerHTML = foPriceOne;
+			document.getElementById('foPriceTwo').innerHTML = foPriceTwo;
+			document.getElementById('foPriceThree').innerHTML = foPriceThree;
+			document.getElementById('foPriceFour').innerHTML = foPriceFour;
+			document.getElementById('foPriceFive').innerHTML = foPriceFive;
+			document.getElementById('foPriceSix').innerHTML = foPriceSix;
+			document.getElementById('foPriceSeven').innerHTML = foPriceSeven;
+			document.getElementById('foPriceEight').innerHTML = foPriceEight;
+			document.getElementById('foPriceNine').innerHTML = foPriceNine;
+			document.getElementById('foPriceTen').innerHTML = foPriceTen;
+			document.getElementById('foPriceEleven').innerHTML = foPriceEleven;
+			document.getElementById('foPriceTwelve').innerHTML = foPriceTwelve;
+			document.getElementById('foPriceThirteen').innerHTML = foPriceThirteen;
+			document.getElementById('foPriceForteen').innerHTML = foPriceFourteen;
+			document.getElementById('foPriceFifteen').innerHTML = foPriceFifteen;
+			document.getElementById('foPriceSixteen').innerHTML = foPriceSixteen;
+			// to display the all name of vegetable items in a button
+			document.getElementById('vNameOne').innerHTML = vNameOne;
+			document.getElementById('vNameTwo').innerHTML = vNameTwo;
+			document.getElementById('vNameThree').innerHTML = vNameThree;
+			document.getElementById('vNameFour').innerHTML = vNameFour;
+			document.getElementById('vNameFive').innerHTML = vNameFive;
+			document.getElementById('vNameSix').innerHTML = vNameSix;
+			document.getElementById('vNameSeven').innerHTML = vNameSeven;
+			document.getElementById('vNameEight').innerHTML = vNameEight;
+			document.getElementById('vNameNine').innerHTML = vNameNine;
+			document.getElementById('vNameTen').innerHTML = vNameTen;
+			document.getElementById('vNameEleven').innerHTML = vNameEleven;
+			document.getElementById('vNameTwelve').innerHTML = vNameTwelve;
+			document.getElementById('vNameThirteen').innerHTML = vNameThirteen;
+			document.getElementById('vNameForteen').innerHTML = vNameFourteen;
+			document.getElementById('vNameFifteen').innerHTML = vNameFifteen;
+			document.getElementById('vNameSixteen').innerHTML = vNameSixteen;
+			// to display all the price of vegetable items in a button
+			document.getElementById('vPriceOne').innerHTML = vPriceOne;
+			document.getElementById('vPriceTwo').innerHTML = vPriceTwo;
+			document.getElementById('vPriceThree').innerHTML = vPriceThree;
+			document.getElementById('vPriceFour').innerHTML = vPriceFour;
+			document.getElementById('vPriceFive').innerHTML = vPriceFive;
+			document.getElementById('vPriceSix').innerHTML = vPriceSix;
+			document.getElementById('vPriceSeven').innerHTML = vPriceSeven;
+			document.getElementById('vPriceEight').innerHTML = vPriceEight;
+			document.getElementById('vPriceNine').innerHTML = vPriceNine;
+			document.getElementById('vPriceTen').innerHTML = vPriceTen;
+			document.getElementById('vPriceEleven').innerHTML = vPriceEleven;
+			document.getElementById('vPriceTwelve').innerHTML = vPriceTwelve;
+			document.getElementById('vPriceThirteen').innerHTML = vPriceThirteen;
+			document.getElementById('vPriceForteen').innerHTML = vPriceFourteen;
+			document.getElementById('vPriceFifteen').innerHTML = vPriceFifteen;
+			document.getElementById('vPriceSixteen').innerHTML = vPriceSixteen;
+			//all the name of drinks items to display in a button
+			document.getElementById('drNameOne').innerHTML = drNameOne;
+			document.getElementById('drNameTwo').innerHTML = drNameTwo;
+			document.getElementById('drNameThree').innerHTML = drNameThree;
+			document.getElementById('drNameFour').innerHTML = drNameFour;
+			document.getElementById('drNameFive').innerHTML = drNameFive;
+			document.getElementById('drNameSix').innerHTML = drNameSix;
+			document.getElementById('drNameSeven').innerHTML = drNameSeven;
+			document.getElementById('drNameEight').innerHTML = drNameEight;
+			document.getElementById('drNameNine').innerHTML = drNameNine;
+			document.getElementById('drNameTen').innerHTML = drNameTen;
+			document.getElementById('drNameEleven').innerHTML = drNameEleven;
+			document.getElementById('drNameTwelve').innerHTML = drNameTwelve;
+			document.getElementById('drNameThirteen').innerHTML = drNameThirteen;
+			document.getElementById('drNameForteen').innerHTML = drNameFourteen;
+			document.getElementById('drNameFifteen').innerHTML = drNameFifteen;
+			document.getElementById('drNameSixteen').innerHTML = drNameSixteen;
+
+			//all the iteams of drinks price to display in a button
+			document.getElementById('drPriceOne').innerHTML = drPriceOne;
+			document.getElementById('drPriceTwo').innerHTML = drPriceTwo;
+			document.getElementById('drPriceThree').innerHTML = drPriceThree;
+			document.getElementById('drPriceFour').innerHTML = drPriceFour;
+			document.getElementById('drPriceFive').innerHTML = drPriceFive;
+			document.getElementById('drPriceSix').innerHTML = drPriceSix;
+			document.getElementById('drPriceSeven').innerHTML = drPriceSeven;
+			document.getElementById('drPriceEight').innerHTML = drPriceEight;
+			document.getElementById('drPriceNine').innerHTML = drPriceNine;
+			document.getElementById('drPriceTen').innerHTML = drPriceTen;
+			document.getElementById('drPriceEleven').innerHTML = drPriceEleven;
+			document.getElementById('drPriceTwelve').innerHTML = drPriceTwelve;
+			document.getElementById('drPriceThirteen').innerHTML = drPriceThirteen;
+			document.getElementById('drPriceForteen').innerHTML = drPriceFourteen;
+			document.getElementById('drPriceFifteen').innerHTML = drPriceFifteen;
+			document.getElementById('drPriceSixteen').innerHTML = drPriceSixteen;
+
+
+
+		}
+
+
+		//function on click display the price and name of fruits in the display
+		function fruitButton(a) {
+			if (a == 1) {
+				document.getElementById('textview').value += frNameOne + "\n";
+				document.getElementById('textviewone').value += "+" + frPriceOne + "\n";
+			}
+			else if (a == 2) {
+				document.getElementById('textview').value += frNameTwo + "\n";
+				document.getElementById('textviewone').value += "+" + frPriceTwo + "\n";
+			}
+			else if (a == 3) {
+				document.getElementById('textview').value += frNameThree + "\n";
+				document.getElementById('textviewone').value += "+" + frPriceThree + "\n";
+			}
+			else if (a == 4) {
+				document.getElementById('textview').value += frNameFour + "\n";
+				document.getElementById('textviewone').value += "+" + frPriceFour + "\n";
+			}
+			else if (a == 5) {
+				document.getElementById('textview').value += frNameFive + "\n";
+				document.getElementById('textviewone').value += "+" + frPriceFive + "\n";
+			}
+			else if (a == 6) {
+				document.getElementById('textview').value += frNameSix + "\n";
+				document.getElementById('textviewone').value += "+" + frPriceSix + "\n";
+			}
+			else if (a == 7) {
+				document.getElementById('textview').value += frNameSeven + "\n";
+				document.getElementById('textviewone').value += "+" + frPriceSeven + "\n";
+			}
+			else if (a == 8) {
+				document.getElementById('textview').value += frNameEight + "\n";
+				document.getElementById('textviewone').value += "+" + frPriceEight + "\n";
+			}
+			else if (a == 9) {
+				document.getElementById('textview').value += frNameNine + "\n";
+				document.getElementById('textviewone').value += "+" + frPriceNine + "\n";
+			}
+			else if (a == 10) {
+				document.getElementById('textview').value += frNameTen + "\n";
+				document.getElementById('textviewone').value += "+" + frPriceTen + "\n";
+			}
+			else if (a == 11) {
+				document.getElementById('textview').value += frNameEleven + "\n";
+				document.getElementById('textviewone').value += "+" + frPriceEleven + "\n";
+			}
+			else if (a == 12) {
+				document.getElementById('textview').value += frNameTwelve + "\n";
+				document.getElementById('textviewone').value += "+" + frPriceTwelve + "\n";
+			}
+			else if (a == 13) {
+				document.getElementById('textview').value += frNameThirteen + "\n";
+				document.getElementById('textviewone').value += "+" + frPriceThirteen + "\n";
+			}
+			else if (a == 14) {
+				document.getElementById('textview').value += frNameFourteen + "\n";
+				document.getElementById('textviewone').value += "+" + frPriceFourteen + "\n";
+			}
+			else if (a == 15) {
+				document.getElementById('textview').value += frNameFifteen + "\n";
+				document.getElementById('textviewone').value += "+" + frPriceFifteen + "\n";
+			}
+			else if (a == 16) {
+				document.getElementById('textview').value += frNameSixteen + "\n";
+				document.getElementById('textviewone').value += "+" + frPriceSixteen + "\n";
+			}
+		}
+
+
+		//onclick display the price and name of food iterms in the display
+		function foodButton(a) {
+			if (a == 1) {
+				document.getElementById('textview').value += foNameOne + "\n";
+				document.getElementById('textviewone').value += "+" + foPriceOne + "\n";
+			}
+			else if (a == 2) {
+				document.getElementById('textview').value += foNameTwo + "\n";
+				document.getElementById('textviewone').value += "+" + foPriceTwo + "\n";
+			}
+			else if (a == 3) {
+				document.getElementById('textview').value += foNameThree + "\n";
+				document.getElementById('textviewone').value += "+" + foPriceThree + "\n";
+			}
+			else if (a == 4) {
+				document.getElementById('textview').value += foNameFour + "\n";
+				document.getElementById('textviewone').value += "+" + foPriceFour + "\n";
+			}
+			else if (a == 5) {
+				document.getElementById('textview').value += foNameFive + "\n";
+				document.getElementById('textviewone').value += "+" + foPriceFive + "\n";
+			}
+			else if (a == 6) {
+				document.getElementById('textview').value += foNameSix + "\n";
+				document.getElementById('textviewone').value += "+" + foPriceSix + "\n";
+			}
+			else if (a == 7) {
+				document.getElementById('textview').value += foNameSeven + "\n";
+				document.getElementById('textviewone').value += "+" + foPriceSeven + "\n";
+			}
+			else if (a == 8) {
+				document.getElementById('textview').value += foNameEight + "\n";
+				document.getElementById('textviewone').value += "+" + foPriceEight + "\n";
+			}
+			else if (a == 9) {
+				document.getElementById('textview').value += foNameNine + "\n";
+				document.getElementById('textviewone').value += "+" + foPriceNine + "\n";
+			}
+			else if (a == 10) {
+				document.getElementById('textview').value += foNameTen + "\n";
+				document.getElementById('textviewone').value += "+" + foPriceTen + "\n";
+			}
+			else if (a == 11) {
+				document.getElementById('textview').value += foNameEleven + "\n";
+				document.getElementById('textviewone').value += "+" + foPriceEleven + "\n";
+			}
+			else if (a == 12) {
+				document.getElementById('textview').value += foNameTwelve + "\n";
+				document.getElementById('textviewone').value += "+" + foPriceTwelve + "\n";
+			}
+			else if (a == 13) {
+				document.getElementById('textview').value += foNameThirteen + "\n";
+				document.getElementById('textviewone').value += "+" + foPriceThirteen + "\n";
+			}
+			else if (a == 14) {
+				document.getElementById('textview').value += foNameFourteen + "\n";
+				document.getElementById('textviewone').value += "+" + foPriceFourteen + "\n";
+			}
+			else if (a == 15) {
+				document.getElementById('textview').value += foNameFifteen + "\n";
+				document.getElementById('textviewone').value += "+" + foPriceFifteen + "\n";
+			}
+			else if (a == 16) {
+				document.getElementById('textview').value += foNameSixteen + "\n";
+				document.getElementById('textviewone').value += "+" + foPriceSixteen + "\n";
+			}
+		}
+		//onclick display the price and name of vegetable items in the display
+		function vegetableButton(a) {
+			if (a == 1) {
+				document.getElementById('textview').value += vNameOne + "\n";
+				document.getElementById('textviewone').value += "+" + vPriceOne + "\n";
+			}
+			else if (a == 2) {
+				document.getElementById('textview').value += vNameTwo + "\n";
+				document.getElementById('textviewone').value += "+" + vPriceTwo + "\n";
+			}
+			else if (a == 3) {
+				document.getElementById('textview').value += vNameThree + "\n";
+				document.getElementById('textviewone').value += "+" + vPriceThree + "\n";
+			}
+			else if (a == 4) {
+				document.getElementById('textview').value += vNameFour + "\n";
+				document.getElementById('textviewone').value += "+" + vPriceFour + "\n";
+			}
+			else if (a == 5) {
+				document.getElementById('textview').value += vNameFive + "\n";
+				document.getElementById('textviewone').value += "+" + vPriceFive + "\n";
+			}
+			else if (a == 6) {
+				document.getElementById('textview').value += vNameSix + "\n";
+				document.getElementById('textviewone').value += "+" + vPriceSix + "\n";
+			}
+			else if (a == 7) {
+				document.getElementById('textview').value += vNameSeven + "\n";
+				document.getElementById('textviewone').value += "+" + vPriceSeven + "\n";
+			}
+			else if (a == 8) {
+				document.getElementById('textview').value += vNameEight + "\n";
+				document.getElementById('textviewone').value += "+" + vPriceEight + "\n";
+			}
+			else if (a == 9) {
+				document.getElementById('textview').value += vNameNine + "\n";
+				document.getElementById('textviewone').value += "+" + vPriceNine + "\n";
+			}
+			else if (a == 10) {
+				document.getElementById('textview').value += vNameTen + "\n";
+				document.getElementById('textviewone').value += "+" + vPriceTen + "\n";
+			}
+			else if (a == 11) {
+				document.getElementById('textview').value += vNameEleven + "\n";
+				document.getElementById('textviewone').value += "+" + vPriceEleven + "\n";
+			}
+			else if (a == 12) {
+				document.getElementById('textview').value += vNameTwelve + "\n";
+				document.getElementById('textviewone').value += "+" + vPriceTwelve + "\n";
+			}
+			else if (a == 13) {
+				document.getElementById('textview').value += vNameThirteen + "\n";
+				document.getElementById('textviewone').value += "+" + vPriceThirteen + "\n";
+			}
+			else if (a == 14) {
+				document.getElementById('textview').value += vNameFourteen + "\n";
+				document.getElementById('textviewone').value += "+" + vPriceFourteen + "\n";
+			}
+			else if (a == 15) {
+				document.getElementById('textview').value += vNameFifteen + "\n";
+				document.getElementById('textviewone').value += "+" + vPriceFifteen + "\n";
+			}
+			else if (a == 16) {
+				document.getElementById('textview').value += vNameSixteen + "\n";
+				document.getElementById('textviewone').value += "+" + vPriceSixteen + "\n";
+			}
+		}
+
+		//function on click display the price and name of drinks in the display
+		function drinkButton(a) {
+			if (a == 1) {
+				document.getElementById('textview').value += drNameOne + "\n";
+				document.getElementById('textviewone').value += "+" + drPriceOne + "\n";
+			}
+			else if (a == 2) {
+				document.getElementById('textview').value += drNameTwo + "\n";
+				document.getElementById('textviewone').value += "+" + drPriceTwo + "\n";
+			}
+			else if (a == 3) {
+				document.getElementById('textview').value += drNameThree + "\n";
+				document.getElementById('textviewone').value += "+" + drPriceThree + "\n";
+			}
+			else if (a == 4) {
+				document.getElementById('textview').value += drNameFour + "\n";
+				document.getElementById('textviewone').value += "+" + drPriceFour + "\n";
+			}
+			else if (a == 5) {
+				document.getElementById('textview').value += drNameFive + "\n";
+				document.getElementById('textviewone').value += "+" + drPriceFive + "\n";
+			}
+			else if (a == 6) {
+				document.getElementById('textview').value += drNameSix + "\n";
+				document.getElementById('textviewone').value += "+" + drPriceSix + "\n";
+			}
+			else if (a == 7) {
+				document.getElementById('textview').value += drNameSeven + "\n";
+				document.getElementById('textviewone').value += "+" + drPriceSeven + "\n";
+			}
+			else if (a == 8) {
+				document.getElementById('textview').value += drNameEight + "\n";
+				document.getElementById('textviewone').value += "+" + drPriceEight + "\n";
+			}
+			else if (a == 9) {
+				document.getElementById('textview').value += drNameNine + "\n";
+				document.getElementById('textviewone').value += "+" + drPriceNine + "\n";
+			}
+			else if (a == 10) {
+				document.getElementById('textview').value += drNameTen + "\n";
+				document.getElementById('textviewone').value += "+" + drPriceTen + "\n";
+			}
+			else if (a == 11) {
+				document.getElementById('textview').value += drNameEleven + "\n";
+				document.getElementById('textviewone').value += "+" + drPriceEleven + "\n";
+			}
+			else if (a == 12) {
+				document.getElementById('textview').value += drNameTwelve + "\n";
+				document.getElementById('textviewone').value += "+" + drPriceTwelve + "\n";
+			}
+			else if (a == 13) {
+				document.getElementById('textview').value += drNameThirteen + "\n";
+				document.getElementById('textviewone').value += "+" + drPriceThirteen + "\n";
+			}
+			else if (a == 14) {
+				document.getElementById('textview').value += drNameFourteen + "\n";
+				document.getElementById('textviewone').value += "+" + drPriceFourteen + "\n";
+			}
+			else if (a == 15) {
+				document.getElementById('textview').value += drNameFifteen + "\n";
+				document.getElementById('textviewone').value += "+" + drPriceFifteen + "\n";
+			}
+			else if (a == 16) {
+				document.getElementById('textview').value += drNameSixteen + "\n";
+				document.getElementById('textviewone').value += "+" + drPriceSixteen + "\n";
+			}
+		}
+		//function to open the edit option
+		function editoption() {
+			window.open('file:///E:/projects/update%20verson%20of%20softwartre/editlist.html', '_self');
+		}
+		//progamming  of cash side 	using javascript
+		function bone() {
+			document.getElementById('moneyvalue').value += 1;
+		}
+		function btwo() {
+			document.getElementById('moneyvalue').value += 2;
+		}
+		function bthree() {
+			document.getElementById('moneyvalue').value += 3;
+		}
+		function bfour() {
+			document.getElementById('moneyvalue').value += 4;
+		}
+		function bfive() {
+			document.getElementById('moneyvalue').value += 5;
+		}
+		function bsix() {
+			document.getElementById('moneyvalue').value += 6;
+		}
+		function bseven() {
+			document.getElementById('moneyvalue').value += 7;
+		}
+		function beight() {
+			document.getElementById('moneyvalue').value += 8;
+		}
+		function bnine() {
+			document.getElementById('moneyvalue').value += 9;
+		}
+		function bzero() {
+			document.getElementById('moneyvalue').value += 0;
+		}
+		function bdzero() {
+			document.getElementById('moneyvalue').value += "00";
+		}
+		function bc() {
+			document.getElementById('moneyvalue').value = "";
+		}
+		function back() {
+			var num = document.getElementById('moneyvalue').value;
+			document.getElementById('moneyvalue').value = num.substr(0, num.length - 1);
+		}
+
+
+		//function to make equal
+		function totalvalue() {
+			var equal = eval(document.getElementById('textviewone').value);
+			document.getElementById('total').value = equal;
+		}
+		setInterval(totalvalue, 100);
+		//functionn to calculate the return value function
+		function moneyback() {
+			var amount = document.getElementById('total').value;
+			var money = document.getElementById('moneyvalue').value;
+			var moneyback = money - amount;
+
+			document.getElementById('poopup').style.display = 'block';
+			document.getElementById('moneyback').innerHTML = moneyback;
+		}
+		//function to indentify the money less
+		function moneyless() {
+			var amount = document.getElementById('total').value;
+			var money = document.getElementById('moneyvalue').value;
+			var moneyback = money - amount;
+
+			if (moneyback < 0) {
+				document.getElementById('poopup').style.display = 'block';
+				document.getElementById('poopup').style.color = "red";
+				document.getElementById('moneyback').innerHTML = moneyback;
+				document.getElementById('negative').innerHTML = "!Money Not Enough";
+			}
+		}
+
+
+
+		//function ok to heide the poop div
+		function ok() {
+			document.getElementById('poopup').style.display = 'none';
+		}
+		// function to reload the page to remove old data
+		function reload() {
+			window.location.reload(true);
+		}
+
+
+	</script>
+</body>
+
+</html>
